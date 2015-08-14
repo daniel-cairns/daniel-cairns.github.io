@@ -1,0 +1,161 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+$deepOrange: #F57C00;
+$lightOrange: #FF9800;
+$tanOrange: #FFE0B2;
+$primaryGrey: #212121;
+$lightGrey: #B6B6B6;
+$darkClass: rgba(33, 33, 33, 1);
+
+body {
+  font-family: Monda, Arial, Sans Serif;
+  font-size: 16px;
+  color: $primaryGrey;
+  background-color: $primaryGrey;
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 30px;
+  bottom: 0;
+  top: 0; 
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hexagon {
+  position: relative;
+  display: inline-block;
+  /* left/right margin approx. 25% of .hexagon width + spacing */
+  margin: 1px 18px;
+  text-align: center;
+  transition: transform 0.4s ease;
+}
+
+.hexagon, .hexagon::before, .hexagon::after {
+  /* easy way: height is width * 1.732
+  actual formula is 2*(width/(2*Math.tan(Math.PI/6)))
+  remove border-radius for straight edges on hexagons */
+  width: 67px;
+  height: 116px;
+  border-radius: 20%/5%;
+}
+
+.hexagon::before {
+  background-color: inherit;
+  content: "";
+  position: absolute;
+  left: 0;
+  transform: rotate(-60deg);
+}
+.hexagon::after {
+  background-color: inherit;
+  content: "";
+  position: absolute;
+  left: 0;
+  transform: rotate(60deg);
+}
+.hexagon:nth-child(even) {
+  /* top approx. 50% of .hexagon height + spacing */
+  top: 59px;
+}
+.hexagon:hover {
+  background-color: $lightGrey;
+  color: $primaryGrey;
+  cursor: pointer;
+  z-index: 105;
+  transform: rotate(90deg);
+  
+}
+.text {
+  transition: transform 0.4s ease;
+}
+.text:hover {    
+  background-color: $lightGrey;
+  transform: rotate(-90deg);
+  border: 3px solid $deepOrange;
+}
+
+.hexagon:active {  
+  z-index: 110;
+}
+
+.text:active {
+  background-color: $lightGrey;
+}
+.hexanone {
+  position: relative;
+  display: inline-block;
+  width: 67px;
+  height: 116px;
+  margin: 1px 18px;
+}
+.hexanone:nth-child(even) {
+  top: 59px;
+}
+.hexagontent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 140%;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  z-index: 100;
+}
+.ibws-fix {
+  /* inline-block whitespace fix */
+  font-size: 0;
+}
+.honeycomb {
+  margin: 0 auto;
+  text-align: center;
+}
+
+img{
+  height: inherit;
+  width: inherit;
+  border-radius: 50%;
+}
+
+.rect-1 {
+  background-color: $deepOrange;
+  height: 90px;
+  width: 60px;
+  transform: rotate(30deg);
+}
+
+.rect-2 {
+  background-color: $lightGrey;
+  height: 90px;
+  width: 60px;
+  transform: rotate(60deg);
+}
+
+.rect-3 {
+  background-color: $lightOrange;
+  height: 90px;
+  width: 60px;
+  transform: rotate(45deg);
+}
