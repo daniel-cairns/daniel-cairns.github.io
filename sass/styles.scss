@@ -24,7 +24,7 @@ $lightOrange: #FF9800;
 $tanOrange: #FFE0B2;
 $primaryGrey: #212121;
 $lightGrey: #B6B6B6;
-$darkClass: rgba(33, 33, 33, 1);
+$darkClass: rgba(33, 33, 33, 0.25);
 
 body {
   font-family: Monda, Arial, Sans Serif;
@@ -81,13 +81,18 @@ body {
   top: 59px;
 }
 .hexagon:hover {
-  background-color: $lightGrey;
+  background-color: $lightOrange;
   color: $primaryGrey;
   cursor: pointer;
   z-index: 105;
   transform: rotate(90deg);
   
 }
+
+.grey:hover {
+  background-color: $lightGrey;
+}
+
 a {
   color: $lightOrange;
   text-decoration: none;
@@ -102,10 +107,11 @@ a:hover {
 .text {
   transition: transform 0.4s ease;
 }
+
 .text:hover {    
   background-color: $lightGrey;
   transform: rotate(-90deg);
-  border: 3px solid $deepOrange;
+  border: 2px solid $deepOrange;
 }
 
 .hexagon:active {  
@@ -151,6 +157,7 @@ $hexw: 60px;
   height: $hexh;
   width: $hexw;
   transform: rotate(30deg);
+  transition: all 0.4s ease;
 }
 
 .rect-2 {
@@ -158,6 +165,7 @@ $hexw: 60px;
   height: $hexh;
   width: $hexw;
   transform: rotate(60deg);
+  transition: all 0.4s ease;
 }
 
 .rect-3 {
@@ -165,4 +173,24 @@ $hexw: 60px;
   height: $hexh;
   width: $hexw;
   transform: rotate(60deg);
+  transition: all 0.4s ease;
+}
+
+.rect-4 {
+  padding: 1em;
+}
+  
+.rect-1:hover, .rect-2:hover, .rect-3:hover {
+  transform: scale(1.1);
+  border-radius: 5px;
+} 
+
+img {
+  height: $hexh;
+  width: $hexw;
+  visibility: hidden;
+}
+
+img:hover {
+  visibility: visible;
 }

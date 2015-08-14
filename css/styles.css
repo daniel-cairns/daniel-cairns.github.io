@@ -77,11 +77,15 @@ body {
 }
 
 .hexagon:hover {
-  background-color: #B6B6B6;
+  background-color: #FF9800;
   color: #212121;
   cursor: pointer;
   z-index: 105;
   transform: rotate(90deg);
+}
+
+.grey:hover {
+  background-color: #B6B6B6;
 }
 
 a {
@@ -101,7 +105,7 @@ a:hover {
 .text:hover {
   background-color: #B6B6B6;
   transform: rotate(-90deg);
-  border: 3px solid #F57C00;
+  border: 2px solid #F57C00;
 }
 
 .hexagon:active {
@@ -150,6 +154,7 @@ a:hover {
   height: 103px;
   width: 60px;
   transform: rotate(30deg);
+  transition: all 0.4s ease;
 }
 
 .rect-2 {
@@ -157,6 +162,7 @@ a:hover {
   height: 103px;
   width: 60px;
   transform: rotate(60deg);
+  transition: all 0.4s ease;
 }
 
 .rect-3 {
@@ -164,4 +170,24 @@ a:hover {
   height: 103px;
   width: 60px;
   transform: rotate(60deg);
+  transition: all 0.4s ease;
+}
+
+.rect-4 {
+  padding: 1em;
+}
+
+.rect-1:hover, .rect-2:hover, .rect-3:hover {
+  transform: scale(1.1);
+  border-radius: 5px;
+}
+
+img {
+  height: 103px;
+  width: 60px;
+  visibility: hidden;
+}
+
+img:hover {
+  visibility: visible;
 }
