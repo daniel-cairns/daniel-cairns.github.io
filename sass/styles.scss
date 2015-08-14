@@ -29,7 +29,7 @@ $darkClass: rgba(33, 33, 33, 1);
 body {
   font-family: Monda, Arial, Sans Serif;
   font-size: 16px;
-  color: $primaryGrey;
+  color: $lightGrey;
   background-color: $primaryGrey;
   max-width: 920px;
   margin: 0 auto;
@@ -88,6 +88,17 @@ body {
   transform: rotate(90deg);
   
 }
+a {
+  color: $lightOrange;
+  text-decoration: none;
+  padding: 0.25em;
+
+}
+
+a:hover {
+  color: $primaryGrey;
+}
+
 .text {
   transition: transform 0.4s ease;
 }
@@ -133,29 +144,25 @@ body {
   text-align: center;
 }
 
-img{
-  height: inherit;
-  width: inherit;
-  border-radius: 50%;
-}
-
+$hexh: 103px;
+$hexw: 60px;
 .rect-1 {
   background-color: $deepOrange;
-  height: 90px;
-  width: 60px;
+  height: $hexh;
+  width: $hexw;
   transform: rotate(30deg);
 }
 
 .rect-2 {
   background-color: $lightGrey;
-  height: 90px;
-  width: 60px;
+  height: $hexh;
+  width: $hexw;
   transform: rotate(60deg);
 }
 
 .rect-3 {
   background-color: $lightOrange;
-  height: 90px;
-  width: 60px;
-  transform: rotate(45deg);
+  height: $hexh;
+  width: $hexw;
+  transform: rotate(60deg);
 }

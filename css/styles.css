@@ -22,7 +22,7 @@ time, mark, audio, video {
 body {
   font-family: Monda, Arial, Sans Serif;
   font-size: 16px;
-  color: #212121;
+  color: #B6B6B6;
   background-color: #212121;
   max-width: 920px;
   margin: 0 auto;
@@ -84,6 +84,16 @@ body {
   transform: rotate(90deg);
 }
 
+a {
+  color: #FF9800;
+  text-decoration: none;
+  padding: 0.25em;
+}
+
+a:hover {
+  color: #212121;
+}
+
 .text {
   transition: transform 0.4s ease;
 }
@@ -135,29 +145,23 @@ body {
   text-align: center;
 }
 
-img {
-  height: inherit;
-  width: inherit;
-  border-radius: 50%;
-}
-
 .rect-1 {
   background-color: #F57C00;
-  height: 90px;
+  height: 103px;
   width: 60px;
   transform: rotate(30deg);
 }
 
 .rect-2 {
   background-color: #B6B6B6;
-  height: 90px;
+  height: 103px;
   width: 60px;
   transform: rotate(60deg);
 }
 
 .rect-3 {
   background-color: #FF9800;
-  height: 90px;
+  height: 103px;
   width: 60px;
-  transform: rotate(45deg);
+  transform: rotate(60deg);
 }
