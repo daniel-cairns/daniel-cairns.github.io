@@ -183,14 +183,19 @@ $hexw: 60px;
 .rect-1:hover, .rect-2:hover, .rect-3:hover {
   transform: scale(1.1);
   border-radius: 5px;
-} 
+}
+
+.rect {
+  z-index: -1;
+}
+
+.rect:hover {
+  z-index: 1;
+}
 
 img {
   height: $hexh;
   width: $hexw;
-  visibility: hidden;
+  display: none;
 }
 
-img:hover {
-  visibility: visible;
-}
