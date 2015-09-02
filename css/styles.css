@@ -16,8 +16,7 @@ time, mark, audio, video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline;
-}
+  vertical-align: baseline; }
 
 body {
   font-family: Monda, Arial, Sans Serif;
@@ -28,14 +27,12 @@ body {
   margin: 0 auto;
   padding: 30px;
   bottom: 0;
-  top: 0;
-}
+  top: 0; }
 
 *, *::before, *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 .hexagon {
   position: relative;
@@ -43,8 +40,7 @@ body {
   /* left/right margin approx. 25% of .hexagon width + spacing */
   margin: 1px 18px;
   text-align: center;
-  transition: transform 0.4s ease;
-}
+  transition: transform 0.4s ease; }
 
 .hexagon, .hexagon::before, .hexagon::after {
   /* easy way: height is width * 1.732
@@ -52,76 +48,58 @@ body {
   remove border-radius for straight edges on hexagons */
   width: 67px;
   height: 116px;
-  border-radius: 20%/5%;
-}
+  border-radius: 20%/5%; }
 
 .hexagon::before {
   background-color: inherit;
   content: "";
   position: absolute;
   left: 0;
-  transform: rotate(-60deg);
-}
+  transform: rotate(-60deg); }
 
 .hexagon::after {
   background-color: inherit;
   content: "";
   position: absolute;
   left: 0;
-  transform: rotate(60deg);
-}
+  transform: rotate(60deg); }
 
 .hexagon:nth-child(even) {
   /* top approx. 50% of .hexagon height + spacing */
-  top: 59px;
-}
+  top: 59px; }
 
 .hexagon:hover {
   background-color: #FF9800;
   color: #212121;
   cursor: pointer;
   z-index: 105;
-  transform: rotate(90deg);
-}
+  transform: rotate(90deg); }
 
 .grey:hover {
-  background-color: #B6B6B6;
-}
+  background-color: #B6B6B6; }
 
 a {
   color: #FF9800;
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 a:hover {
-  color: #212121;
-}
+  color: #212121; }
 
 .text {
   transition: transform 0.4s ease;
-}
+  padding: 10px; }
 
 .text:hover {
   background-color: #B6B6B6;
   transform: rotate(-90deg);
-  border: 2px solid #F57C00;
-}
-
-.text:active {
-  background-color: #B6B6B6;
-}
+  border: 2px solid #F57C00; }
 
 .hexanone {
   position: relative;
   display: inline-block;
   width: 67px;
   height: 116px;
-  margin: 1px 18px;
-}
-
-.hexanone:nth-child(even) {
-  top: 59px;
-}
+  margin: 1px 18px; }
 
 .hexagontent {
   position: absolute;
@@ -131,62 +109,52 @@ a:hover {
   width: 140%;
   font-size: 1.4rem;
   line-height: 1.2;
-  z-index: 100;
-}
+  z-index: 100; }
 
 .ibws-fix {
   /* inline-block whitespace fix */
-  font-size: 0;
-}
+  font-size: 0; }
 
 .honeycomb {
   margin: 0 auto;
-  text-align: center;
-}
+  text-align: center; }
 
 .rect-1 {
   background-color: #F57C00;
-  height: 103px;
-  width: 60px;
+  height: 60px;
+  width: 103px;
   transform: rotate(30deg);
-  transition: all 0.4s ease;
-}
+  transition: all 0.4s ease; }
 
 .rect-2 {
   background-color: #B6B6B6;
-  height: 103px;
-  width: 60px;
+  height: 60px;
+  width: 103px;
   transform: rotate(60deg);
-  transition: all 0.4s ease;
-}
+  transition: all 0.4s ease; }
 
 .rect-3 {
   background-color: #FF9800;
-  height: 103px;
-  width: 60px;
+  height: 60px;
+  width: 103px;
   transform: rotate(60deg);
-  transition: all 0.4s ease;
-}
+  transition: all 0.4s ease; }
 
 .rect-4 {
-  padding: 1em;
-}
+  padding: 1em; }
 
 .rect-1:hover, .rect-2:hover, .rect-3:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
   border-radius: 5px;
-}
+  transition: all 0.4s ease; }
 
-.rect {
-  z-index: -1;
-}
+.rect a {
+  color: #FF9800;
+  vertical-align: middle;
+  line-height: 60px;
+  padding: 15px 10px; }
 
-.rect:hover {
-  z-index: 1;
-}
+.rect a:hover {
+  color: #212121; }
 
-img {
-  height: 103px;
-  width: 60px;
-  display: none;
-}
+/*# sourceMappingURL=styles.css.map */
